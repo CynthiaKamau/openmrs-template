@@ -39,10 +39,10 @@ const backendDependencies = {
  * `/openmrs/spa/hello`.
  */
 function setupOpenMRS() {
-  const moduleName = '@openmrs/esm-template-app';
+  const moduleName = '@openmrs/esm-trial-app';
 
   const options = {
-    featureName: 'hello-world',
+    featureName: 'active-visits',
     moduleName,
   };
 
@@ -53,6 +53,10 @@ function setupOpenMRS() {
       {
         load: getAsyncLifecycle(() => import('./hello'), options),
         route: 'hello',
+      },
+      {
+        load: getAsyncLifecycle(() => import('./goodbye'), options),
+        route: 'goodbye',
       },
     ],
   };

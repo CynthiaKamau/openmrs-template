@@ -1,9 +1,9 @@
 {
-  "name": "@openmrs/esm-template-app",
+  "name": "@openmrs/esm-trial-app",
   "version": "3.0.0",
   "license": "MPL-2.0",
-  "description": "A microfrontend template OpenMRS",
-  "browser": "dist/openmrs-esm-template-app.js",
+  "description": "A microfrontend trial OpenMRS",
+  "browser": "dist/openmrs-esm-trial-app.js",
   "main": "src/index.ts",
   "source": true,
   "scripts": {
