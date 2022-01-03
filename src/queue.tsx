@@ -12,11 +12,13 @@ import React from 'react';
 import styles from './hello.css';
 import QueueTable from '../src/queue/queue';
 import { MyHeader } from '../src/header/header';
+import { SubMenu } from '../src/submenu/submenu';
 
 const Hello: React.FC = () => {
   return (
     <div className={`omrs-main-content ${styles.container}`}>
       <MyHeader />
+      <SubMenu />
       <QueueTable />
     </div>
   );

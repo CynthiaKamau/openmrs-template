@@ -15,21 +15,29 @@ export function MyHeader() {
   const { data: headerData } = JsonData;
 
   return (
-    <div>
-      <div className="bx--row landing-page__r3">
+    <div className="bx--grid--full-width">
+      <div className="bx--row">
+        <h3 className={styles.metrics}>Clinic metrics</h3>
+      </div>
+      <div className="bx--row">
         {headerData.map((d, i) => (
-          <div className="info-card  bx--col-md-4 bx--col-lg-4 bx--col-xlg-3 bx--offset-xlg-1">
-            <Tile>
-              <div className="info-card__heading">
+          <div className="bx--col">
+            <Tile light className={styles.t}>
+              <div className="bx--col">
                 <h4>{d.title} </h4>
-                <span className="pull-right">
-                  {' '}
+              </div>
+
+              <div className="bx--col">
+                <span className={styles.info_card_right}>
                   Patient List
                   <ArrowRight16 />
                 </span>
               </div>
-              <p className="info-card__body"> {d.subtitle} </p>
-              <h3> {d.total}</h3>{' '}
+
+              <div className={styles.footer}>
+                <p> {d.subtitle} </p>
+                <h3 className={styles.footer_text}> {d.total}</h3>{' '}
+              </div>
             </Tile>
           </div>
         ))}

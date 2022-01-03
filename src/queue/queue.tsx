@@ -17,6 +17,7 @@ import {
   TableExpandRow,
   TableExpandHeader,
   Tile,
+  Tag,
 } from 'carbon-components-react';
 import {
   useLayoutType,
@@ -55,33 +56,23 @@ const QueueTable = () => {
     () => [
       {
         id: 0,
-        header: t('visitStartTime', 'Visit Time'),
-        key: 'visitStartTime',
-      },
-      {
-        id: 1,
-        header: t('idNumber', 'ID Number'),
-        key: 'idNumber',
-      },
-      {
-        id: 2,
         header: t('name', 'Name'),
         key: 'name',
       },
       {
+        id: 1,
+        header: t('priority', 'Priority'),
+        key: 'priority',
+      },
+      {
+        id: 2,
+        header: t('waitingFor', 'Waiting For'),
+        key: 'waitingFor',
+      },
+      {
         id: 3,
-        header: t('gender', 'Gender'),
-        key: 'gender',
-      },
-      {
-        id: 4,
-        header: t('age', 'Age'),
-        key: 'age',
-      },
-      {
-        id: 5,
-        header: t('visitType', 'Visit Type'),
-        key: 'visitType',
+        header: t('waitTime', 'Wait time(mins)'),
+        key: 'waitTime',
       },
     ],
     [t],
@@ -167,6 +158,21 @@ const QueueTable = () => {
                                 to={`\${openmrsSpaBase}/patient/${activeVisits?.[index]?.patientUuid}/chart/`}>
                                 {cell.value}
                               </ConfigurableLink>
+                            ) : (
+                              cell.value
+                            )}
+                            {cell.info.header === 'priority' && cell.value === 'Emergency' ? (
+                              <Tag type="red" title="Clear Filter">
+                                {cell.value}
+                              </Tag>
+                            ) : cell.info.header === 'priority' && cell.value === 'Priority' ? (
+                              <Tag type="magenta" title="Clear Filter">
+                                {cell.value}
+                              </Tag>
+                            ) : cell.info.header === 'priority' && cell.value === 'Not urgent' ? (
+                              <Tag type="green" title="Clear Filter">
+                                {cell.value}
+                              </Tag>
                             ) : (
                               cell.value
                             )}

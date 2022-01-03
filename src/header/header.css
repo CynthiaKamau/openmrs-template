@@ -1,14 +1,27 @@
-.greeting {
-  text-transform: capitalize;
-  margin-bottom: 2em;
-}
-
-.info-card {
+.tile {
   background-color: white;
-  outline: black;
   border-width: 1em;
+  border-style: solid;
+  border: black;
 }
 
-.info-card__heading {
-  margin-bottom: 2em;
+.t {
+  border: 0.1rem solid black;
+}
+
+.footer {
+  margin-top: 2em;
+}
+
+.metrics {
+  margin: 2em 0 2em;
+}
+
+.footer_text {
+  font-size: 35px;
+}
+
+.info_card_right {
+  float: right;
+  color: blue;
 }

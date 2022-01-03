@@ -13,6 +13,9 @@ export interface ActiveVisit {
   visitStartTime: string;
   visitType: string;
   visitUuid: string;
+  priority: string;
+  waitTime: number;
+  waitingFor: string;
 }
 
 export function useActiveVisits() {
@@ -44,6 +47,9 @@ export function useActiveVisits() {
     visitStartTime: visit.startDate,
     visitType: visit?.visitType?.display,
     visitUuid: visit.uuid,
+    priority: '',
+    waitTime: 0,
+    waitingFor: visit?.visitType?.display,
   });
 
   const formattedActiveVisits = data?.data?.results.length ? data.data.results.map(mapVisitProperties) : [];

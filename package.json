@@ -45,7 +45,7 @@
     "@carbon/icons-react": "^10.18.0",
     "carbon-components-react": "^7.25.0",
     "lodash-es": "^4.17.15",
-    "swr": "^1.1.1"
+    "swr": "^1.1.2"
   },
   "peerDependencies": {
     "@openmrs/esm-framework": "3.x",
