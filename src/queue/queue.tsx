@@ -46,10 +46,6 @@ const QueueTable = () => {
 
   const { data: activeVisits, isError, isLoading, isValidating } = jsonData;
 
-  console.log('im here', activeVisits);
-
-  console.log('im here loading', isLoading);
-
   const desktopView = layout === 'desktop';
   const pageSizes = config?.activeVisits?.pageSizes ?? [10, 20, 50];
   const [currentPageSize, setPageSize] = useState(config?.activeVisits?.pageSize ?? 10);

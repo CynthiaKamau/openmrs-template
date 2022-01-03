@@ -14,8 +14,6 @@ import { ArrowRight16 } from '@carbon/icons-react';
 export function MyHeader() {
   const { data: headerData } = JsonData;
 
-  console.log('here', headerData);
-
   return (
     <div>
       <div className="bx--row landing-page__r3">
