@@ -58,6 +58,10 @@ function setupOpenMRS() {
         load: getAsyncLifecycle(() => import('./goodbye'), options),
         route: 'goodbye',
       },
+      {
+        load: getAsyncLifecycle(() => import('./queue'), options),
+        route: 'visits',
+      },
     ],
   };
 }

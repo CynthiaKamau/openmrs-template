@@ -10,18 +10,16 @@
 
 import React from 'react';
 import styles from './hello.css';
-import { Greeter } from './greeter/greeter';
-import { PatientGetter } from './patient-getter/patient-getter';
-import { MyHeader } from './header/header';
+import QueueTable from '../src/queue/queue';
+import { MyHeader } from '../src/header/header';
 
-const Goodbye: React.FC = () => {
+const Hello: React.FC = () => {
   return (
     <div className={`omrs-main-content ${styles.container}`}>
-      <Greeter />
-      <PatientGetter />
       <MyHeader />
+      <QueueTable />
     </div>
   );
 };
 
-export default Goodbye;
+export default Hello;

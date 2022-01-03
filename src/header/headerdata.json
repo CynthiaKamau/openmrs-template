@@ -1,0 +1,4 @@
+{"data" : [{"id":1,"title":"Scheduled appts, today","subtitle":"Patients","total":191},
+    {"id":2,"title":"Waiting for : Triage","subtitle":"Patients","total":103},
+    {"id":3,"title":"Average wait time today","subtitle":"Minutes","total":172}]
+}

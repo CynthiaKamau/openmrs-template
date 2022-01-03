@@ -1,0 +1,14 @@
+.greeting {
+  text-transform: capitalize;
+  margin-bottom: 2em;
+}
+
+.info-card {
+  background-color: white;
+  outline: black;
+  border-width: 1em;
+}
+
+.info-card__heading {
+  margin-bottom: 2em;
+}
