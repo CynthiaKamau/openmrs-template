@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, cleanup, screen, getByText } from '@testing-library/react';
 import { useConfig } from '@openmrs/esm-framework';
-import { Greeter } from './header';
+import { Greeter } from '../greeter/greeter';
 import { Config } from '../config-schema';
 
 const mockUseConfig = useConfig as jest.Mock;
